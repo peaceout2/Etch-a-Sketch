@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width:640px;
+  height:640px;
+  margin: 0 auto;
+ 
+}
+
+.square {
+   width:40px;
+   height:40px;
+   border: 1px solid turquoise;
+   box-sizing: border-box;
+   opacity: 1;
+   transition: opacity 0.1s ease;
+}
+
+
+.changebtn {
+    width: 180px;
+    margin: 20px;
+
+}
+
+.title {
+    font-size: 40px;
+    font-family: Arial , sans-serif;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reset {
+    margin-bottom: 10px;
+}
