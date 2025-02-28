@@ -22,12 +22,8 @@ const squareDivs = document.querySelectorAll(".square");
 squareDivs.forEach((square) => {
     square.addEventListener("mouseover", () => {
 
-        const r = Math.floor(Math.random()*256);
-        const g = Math.floor(Math.random()*256);
-        const b = Math.floor(Math.random()*256);
+        square.style.backgroundColor = "grey";
 
-        square.style.backgroundColor = `rgb(0,${g},0)`;
- 
     });
 
 });
@@ -72,9 +68,9 @@ function newGrid() {
 // function still lacking in terms if user clicks cancel
 
 function changeDim() {
-     n = prompt("Input a value (1-100)");
-
-    if(n >= 1 || n <=100) {
+     n = parseInt(prompt("Input a value (1-100)"));
+     
+    if(n >= 0 || n <=100) {
         // remove grid
         while (container.firstChild) {
             container.removeChild(container.firstChild);
@@ -84,7 +80,6 @@ function changeDim() {
         
     } else {
         n = prompt("Input a value (1-100)");
-        
     }
 
 }
