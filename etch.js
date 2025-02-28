@@ -68,9 +68,22 @@ function newGrid() {
 // function still lacking in terms if user clicks cancel
 
 function changeDim() {
-     n = parseInt(prompt("Input a value (1-100)"));
+     n = prompt("Input a value (1-100)");
+     console.log(n);
+
+     if(n === null) {
+        console.log("User canceled the prompt. No changes made.");
+        return;
+     };
+
+     if( isNaN(n) ) {
+        alert("Please input a valid number");
+        changeDim();
+     }
+
+    n = parseInt(n);
      
-    if(n >= 0 || n <=100) {
+    if(n >= 0 && n <=100) {
         // remove grid
         while (container.firstChild) {
             container.removeChild(container.firstChild);
@@ -79,7 +92,7 @@ function changeDim() {
         colorGrid();    
         
     } else {
-        n = prompt("Input a value (1-100)");
+        alert("Please input a number from 1 - 100");
     }
 
 }
